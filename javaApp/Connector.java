@@ -15,23 +15,13 @@ public class Connector {
                     String password = rSet.getString("password");
                     System.out.println(password);
                 }
-                exitPrompt();    
+                prompt.exitPrompt();
                 passPrompt();   
                 
             }
         catch (SQLException e) {
             e.printStackTrace();
         }
-    }
-
-    static void exitPrompt() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Welcome to the password manager.\nTo exit, please enter 'exit' or 'q'.");
-        String userIn = sc.nextLine();
-        if(userIn.equals("q") || userIn.equals("exit"))
-            System.exit(0);
-        else
-            return;
     }
 
     static String userNamePrompt() {
