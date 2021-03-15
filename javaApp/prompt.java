@@ -4,7 +4,10 @@ import java.util.*;
 import java.sql.*;
 
 public class prompt {
-     int connectPrompt() {
+    public static void main(String[] args) {
+        connectPrompt();
+    } 
+    public static int connectPrompt() {
         Scanner sc = new Scanner(System.in);
         Connector con = new Connector();
         String connect = "Are you supposed to be connected this db? Enter Y (yes) or N (no).";
